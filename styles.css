@@ -61,6 +61,7 @@ body{
 .operator,.number,.double{
     cursor: pointer;
     font-weight: bold;
+    box-shadow: -2px 2px 2px rgb(95, 95, 95);
 }
 
 .operator{
@@ -75,4 +76,8 @@ body{
 
 .empty-space{
     background-color: transparent;
+}
+
+.operator:active,.number:active,.double:active{
+    box-shadow:none;
 }
