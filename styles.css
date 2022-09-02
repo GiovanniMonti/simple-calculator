@@ -8,8 +8,8 @@ body{
 }
 
 #calculator{
-    max-width: 40%;
-    height: 70%;
+    width: 30%;
+    height: 75%;
     margin:auto;
     background-color: white;
     border: 1px solid black;
@@ -25,20 +25,21 @@ body{
 
 #result{
     height: 20%;
-    font-size: medium;
+    font-size: x-large;
 }
 
 #history{
     text-align: right;
-    padding-top: 5px;
-    margin:0px 20px 0px 0px;
+    padding-top:5px;
+    margin:0 20px 0 0;
     font-size: 0.8em;
+    height:25%;
     color: rgb(94, 94, 94);
 }
 
 #output{
     text-align: right;
-    margin:0px 20px 0px 0px;
+    margin:0 20px 0 0;
 }
 
 #keypad{
@@ -52,9 +53,14 @@ body{
     float: left;
     margin: 2.5% 2.5% 2.5% 2.5%;
     border-radius: 33%;
-    border-width: 0px;
+    border-width: 0;
     border: hidden;
     background-color: lightgreen;
+}
+
+.operator,.number,.double{
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .operator{
