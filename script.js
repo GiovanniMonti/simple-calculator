@@ -35,7 +35,6 @@ for(var i=0; i<operator.length; i++){
             setHistory('');
             return;
         }
-
         var output = getOutput();
         var history = getHistory();
 
@@ -55,15 +54,14 @@ for(var i=0; i<operator.length; i++){
                     setHistory('');
                     setOutput(checkFormat(history));
                 }
-
             }
             return;
         }
 
         if(this.id=='execute'){
-
-            
-
+            output = eval(history+output);
+            setOutput(output);
+            setHistory('');
             return;
         }
 
@@ -75,21 +73,15 @@ for(var i=0; i<operator.length; i++){
         }
 
         if(output==''&&history!=''){
-
             if (isNaN(history[history.length-1])){
-
                 if(this.id!='-' && history[history.length-1]!= '+' && history[history.length-1]!='-'){
                     history = history.slice(0,history.length-1);
                 }
-
                 history += this.id;
                 setHistory(history);
-
             }
             return;
         }
-
-
     })
 }
 
